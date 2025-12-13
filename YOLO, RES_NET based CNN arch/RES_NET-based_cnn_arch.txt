@@ -1,0 +1,45 @@
+from   n    params     module                                   arguments
+---------------------------------------------------------------------------
+ 0     -1   320        nn.Conv2d                                [1, 32, 3, 1, 1, bias=False]
+ 1     -1   64         nn.BatchNorm2d                           [32]
+ 2     -1   9248       nn.Conv2d                                [32, 32, 3, 1, 1, bias=False]
+ 3     -1   64         nn.BatchNorm2d                           [32]
+ 4     -1   32         nn.Conv2d                                [1, 32, 1, 1, bias=False]
+ 5     -1   64         nn.BatchNorm2d                           [32]
+ 6     -1   0          nn.ReLU                                  []
+ 7     -1   0          nn.MaxPool2d                             [2, 2]
+
+ 8     -1   18432      nn.Conv2d                                [32, 64, 3, 1, 1, bias=False]
+ 9     -1   128        nn.BatchNorm2d                           [64]
+10     -1   36864      nn.Conv2d                                [64, 64, 3, 1, 1, bias=False]
+11     -1   128        nn.BatchNorm2d                           [64]
+12     -1   2048       nn.Conv2d                                [32, 64, 1, 1, bias=False]
+13     -1   128        nn.BatchNorm2d                           [64]
+14     -1   0          nn.ReLU                                  []
+15     -1   0          nn.MaxPool2d                             [2, 2]
+
+16     -1   73728      nn.Conv2d                                [64, 128, 3, 1, 1, bias=False]
+17     -1   256        nn.BatchNorm2d                           [128]
+18     -1   147456     nn.Conv2d                                [128, 128, 3, 1, 1, bias=False]
+19     -1   256        nn.BatchNorm2d                           [128]
+20     -1   8192       nn.Conv2d                                [64, 128, 1, 1, bias=False]
+21     -1   256        nn.BatchNorm2d                           [128]
+22     -1   0          nn.ReLU                                  []
+
+23     -1   0          nn.Flatten                               []
+24     -1   4194816    nn.Linear                                [8192, 512]
+25     -1   0          nn.ReLU                                  []
+26     -1   0          nn.Dropout                               [p=0.25]
+27     -1   6156       nn.Linear                                [512, 12]
+
+---------------------------------------------------------------------------
+Model Summary:
+- Architecture: ResNet-based CNN
+- Residual Blocks: 3
+- Input Shape: 1 × 32 × 32
+- Output Classes: 12
+- Total Parameters: ~4.5 Million
+- Test Accuracy: 98.75%
+- Device Support: CPU / CUDA
+---------------------------------------------------------------------------
+
